@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 
-class Anagram
+class Anagrams
   attr_accessor(:word1, :word2)
 
   def initialize(word1, word2)
