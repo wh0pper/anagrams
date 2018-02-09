@@ -8,7 +8,7 @@ class Anagrams
     @word2 = word2.downcase
   end
 
-  def is_anagram?
+  def anagram?
     letters1 = @word1.delete(' ').split('').sort
     letters2 = @word2.delete(' ').split('').sort
     # letters1 & letters2 == letters1
@@ -22,6 +22,10 @@ class Anagrams
       end
     end
     return true
+  end
+
+  def antigram?
+
   end
 
 end

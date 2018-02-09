@@ -12,30 +12,36 @@ describe('Anagrams') do
     end
   end
 
-  describe('#is_anagram?') do
+  describe('#anagram?') do
     it ('checks single letter words') do
       anagram = Anagrams.new('a','a')
-      expect(anagram.is_anagram?).to(eq(true))
+      expect(anagram.anagram?).to(eq(true))
     end
 
     it ('checks multi-letter words') do
       anagram = Anagrams.new('eat','tea')
-      expect(anagram.is_anagram?).to(eq(true))
+      expect(anagram.anagram?).to(eq(true))
       anagram.word1 = 'listen'
       anagram.word2 = 'silent'
-      expect(anagram.is_anagram?).to(eq(true))
+      expect(anagram.anagram?).to(eq(true))
     end
 
     it ('is case insensitive') do
       anagram = Anagrams.new('EAT', 'tea')
-      expect(anagram.is_anagram?).to(eq(true))
+      expect(anagram.anagram?).to(eq(true))
     end
 
     it ('works for multi-word anagrams') do
-      anagram = Anagrams.new('school master','the classroom')
-      expect(anagram.is_anagram?).to(eq(true))
+      anagram = Anagrams.new('School master','the classroom')
+      expect(anagram.anagram?).to(eq(true))
     end
+  end
 
+  describe('#antigram?') do
+    it ('if words arent antigrams, checks if they are antigrams') do
+      antigram = Anagrams.new('cat','fun')
+      expect(antigram.antigram?).to(eq(true))
+    end
   end
 
 end
