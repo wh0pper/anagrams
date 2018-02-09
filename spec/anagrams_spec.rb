@@ -26,7 +26,10 @@ describe('Anagrams') do
       expect(anagram.is_anagram?).to(eq(true))
     end
 
-    it ('is case insensitive')
+    it ('is case insensitive') do
+      anagram = Anagrams.new('EAT', 'tea')
+      expect(anagram.is_anagram?).to(eq(true))
+    end
 
   end
 
