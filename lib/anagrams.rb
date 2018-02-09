@@ -9,7 +9,7 @@ class Anagrams
   end
 
   def is_anagram?
-
+    @word1 = @word2
   end
 
 end
