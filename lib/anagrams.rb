@@ -47,13 +47,17 @@ class Anagrams
     return true
   end
 
-  # def generate
-  #   letters = @word1.delete(' ').split('')
-  #   combos = letters.permutation(letters.length).to_a
-  #   results = []
-  #   combos.each do |combo_array|
-  #     combo = combo_array.join
-  #     if
-  # end
+  def generate
+    letters = @word1.delete(' ').split('')
+    combos = letters.permutation(letters.length).to_a
+    results = []
+    combos.each do |combo_array|
+      combo = combo_array.join
+      if in_dict?(combo)
+        results.push(combo)
+      end
+    end
+    return results
+  end
 
 end
