@@ -9,14 +9,13 @@ class Anagrams
   end
 
   def anagram?
-    letters1 = @word1.delete(' ').split('').sort
+    @letters1 = @word1.delete(' ').split('').sort
     letters2 = @word2.delete(' ').split('').sort
-    # letters1 & letters2 == letters1
-    if (letters1.length != letters2.length)
+    if (@letters1.length != letters2.length)
       return false
     else
-      letters1.each_with_index do |index|
-        if (letters1[index.to_i] != letters2[index.to_i])
+      @letters1.each_with_index do |index|
+        if (@letters1[index.to_i] != letters2[index.to_i])
           return false
         end
       end
@@ -25,13 +24,12 @@ class Anagrams
   end
 
   def antigram?
-    letters1 = @word1.delete(' ').split('').sort
-    letters1.each do |letter|
+    @letters1.each do |letter|
       if (@word2.include?(letter))
         return false
       end
     end
-    return true 
+    return true
   end
 
 end
