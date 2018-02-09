@@ -12,6 +12,13 @@ describe('Anagrams') do
     end
   end
 
+  describe('#words?') do
+    it ('checks if inputs are words or not') do
+      words = Anagrams.new('zygote', 'upswing')
+      expect(words.words?).to(eq(true))
+    end
+  end
+
   describe('#anagram?') do
     it ('checks single letter words') do
       anagram = Anagrams.new('a','a')
