@@ -21,8 +21,12 @@ describe('Anagrams') do
     it ('checks multi-letter words') do
       anagram = Anagrams.new('eat','tea')
       expect(anagram.is_anagram?).to(eq(true))
+      anagram.word1 = 'listen'
+      anagram.word2 = 'silent'
+      expect(anagram.is_anagram?).to(eq(true))
     end
 
+    it ('is case insensitive')
 
   end
 
