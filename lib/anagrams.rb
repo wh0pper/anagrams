@@ -9,8 +9,8 @@ class Anagrams
   end
 
   def is_anagram?
-    letters1 = @word1.split('')
-    letters2 = @word2.split('')
+    letters1 = @word1.delete(' ').split('')
+    letters2 = @word2.delete(' ').split('')
     letters1 & letters2 == letters1
   end
 
