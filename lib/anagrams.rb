@@ -15,11 +15,11 @@ class Anagrams
         words.push(line.strip)
       end
     end
-    # if words.include?(@word1) & words.include?(@word2)
-    #   return true
-    # else
-    #   return false
-    # end
+    if words.include?(@word1) & words.include?(@word2)
+      return true
+    else
+      return false
+    end
   end
 
   def anagram?
