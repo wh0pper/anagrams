@@ -47,4 +47,9 @@ class Anagrams
     return true
   end
 
+  # def generate
+  #   letters = @word1.delete(' ').split('')
+  #
+  # end
+
 end

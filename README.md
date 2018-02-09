@@ -25,9 +25,11 @@ Takes user input words and checks if they are anigrams or antigrams.
 6. Method checks to see if inputs are real words
   * Example Input: "dog", "ogd"
   * Example Output: "Invalid word input"
-  
 
-
+### Anagram Generator Feature
+7. Method takes one input word and returns all possible single-word anagrams of that word
+    * Example Input: "those"
+    * Example Output: "shote", "ethos" 
 
 ## Setup/Installation Requirements
 
