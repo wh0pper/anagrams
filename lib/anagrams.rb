@@ -25,7 +25,13 @@ class Anagrams
   end
 
   def antigram?
-
+    letters1 = @word1.delete(' ').split('').sort
+    letters1.each do |letter|
+      if (@word2.include?(letter))
+        return false
+      end
+    end
+    return true 
   end
 
 end
