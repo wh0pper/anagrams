@@ -9,9 +9,19 @@ class Anagrams
   end
 
   def is_anagram?
-    letters1 = @word1.delete(' ').split('')
-    letters2 = @word2.delete(' ').split('')
-    letters1 & letters2 == letters1
+    letters1 = @word1.delete(' ').split('').sort
+    letters2 = @word2.delete(' ').split('').sort
+    # letters1 & letters2 == letters1
+    if (letters1.length != letters2.length)
+      return false
+    else
+      letters1.each_with_index do |index|
+        if (letters1[index.to_i] != letters2[index.to_i])
+          return false
+        end
+      end
+    end
+    return true
   end
 
 end
