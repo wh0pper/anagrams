@@ -19,7 +19,7 @@ describe('Anagrams') do
     end
 
     it ('checks multi-letter words') do
-      anagram = Anagrams.new('eat','tea')
+      anagram = Anagrams.new('rat','tar')
       expect(anagram.is_anagram?).to(eq(true))
     end
   end
