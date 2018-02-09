@@ -30,6 +30,11 @@ describe('Anagrams') do
       anagram = Anagrams.new('EAT', 'tea')
       expect(anagram.is_anagram?).to(eq(true))
     end
+    
+    it ('works for multi-word anagrams') do
+      anagram = Anagrams.new('dormitory','dirty room')
+      expect(anagram.is_anagram?).to(eq(true))
+    end
 
   end
 
