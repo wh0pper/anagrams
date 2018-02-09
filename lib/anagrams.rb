@@ -8,7 +8,7 @@ class Anagrams
     @word2 = word2.downcase
   end
 
-  def words?
+  def in_dict?
     words = []
     File.open("/usr/share/dict/words") do |file|
       file.each do |line|
