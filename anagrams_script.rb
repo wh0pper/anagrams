@@ -9,7 +9,7 @@ puts 'Enter second word or phrase:'
 word2 = gets.chomp
 words = Anagrams.new(word1, word2)
 
-if (words.in_dict?)
+if (words.in_dict?(word1) && words.in_dict?(word2))
   if words.anagram?
     puts 'These words are anagrams.'
   elsif words.antigram?

@@ -8,14 +8,14 @@ class Anagrams
     @word2 = word2.downcase
   end
 
-  def in_dict?
+  def in_dict?(word)
     words = []
     File.open("/usr/share/dict/words") do |file|
       file.each do |line|
         words.push(line.strip)
       end
     end
-    if words.include?(@word1) & words.include?(@word2)
+    if words.include?(word)
       return true
     else
       return false
@@ -49,7 +49,11 @@ class Anagrams
 
   # def generate
   #   letters = @word1.delete(' ').split('')
-  #
+  #   combos = letters.permutation(letters.length).to_a
+  #   results = []
+  #   combos.each do |combo_array|
+  #     combo = combo_array.join
+  #     if
   # end
 
 end

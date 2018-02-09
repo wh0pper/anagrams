@@ -12,15 +12,16 @@ describe('Anagrams') do
     end
   end
 
-  describe('#in_dict?') do
+  describe('#in_dict?(word)') do
     it ('checks if inputs are words or not') do
       words = Anagrams.new('zygote', 'upswing')
-      expect(words.in_dict?).to(eq(true))
+      expect(words.in_dict?('zygote')).to(eq(true))
+      expect(words.in_dict?('upswing')).to(eq(true))
     end
 
     it ('returns false if words are not found in unix dictionary') do
       words = Anagrams.new('psde', 'ckdok')
-      expect(words.in_dict?).to(eq(false))
+      expect(words.in_dict?('psde')).to(eq(false))
     end
   end
 
