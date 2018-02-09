@@ -22,6 +22,10 @@ Takes user input words and checks if they are anigrams or antigrams.
 5. If words aren't anagrams, another method checks if they are antigrams
   * Example Input: "cat", "peg"
   * Example Output: is_anigram? returns false, is_antigram? returns true
+6. Method checks to see if inputs are real words
+  * Example Input: "dog", "ogd"
+  * Example Output: "Invalid word input"
+  
 
 
 
