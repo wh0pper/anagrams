@@ -49,10 +49,9 @@ class Anagrams
 
   def generate
     letters = @word1.delete(' ').split('')
-    combos = letters.permutation(letters.length).to_a
+    combos = letters.permutation.map &:join
     results = []
-    combos.each do |combo_array|
-      combo = combo_array.join
+    combos.each do |combo|
       if in_dict?(combo)
         results.push(combo)
       end

@@ -74,11 +74,11 @@ describe('Anagrams') do
     end
   end
 
-  # describe('#generator') do
-  #   it ('returns array of all possible anagrams if second argument is empty') do
-  #     generator = Anagrams.new('those','')
-  #     expect(generator.generate).to(eq(['those','ethos','shote']))
-  #   end
-  # end
+  describe('#generator') do
+    it ('returns array of all possible anagrams if second argument is empty') do
+      generator = Anagrams.new('those','')
+      expect(generator.generate).to(eq(['those','shote','ethos']))
+    end
+  end
 
 end
