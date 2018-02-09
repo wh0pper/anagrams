@@ -17,6 +17,11 @@ describe('Anagrams') do
       words = Anagrams.new('zygote', 'upswing')
       expect(words.words?).to(eq(true))
     end
+
+    it ('returns false if words are not found in unix dictionary') do
+      words = Anagrams.new('psde', 'ckdok')
+      expect(words.words?).to(eq(false))
+    end
   end
 
   describe('#anagram?') do
