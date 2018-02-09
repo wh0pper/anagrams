@@ -42,6 +42,16 @@ describe('Anagrams') do
       antigram = Anagrams.new('cat','fun')
       expect(antigram.antigram?).to(eq(true))
     end
+
+    it ('neither anagrams nor antigrams') do
+      antigram = Anagrams.new('cat','fan')
+      expect(antigram.antigram?).to(eq(false))
+    end
+
+    it ('multi-word antigrams') do
+      antigram = Anagrams.new('eat it','for on')
+      expect(antigram.antigram?).to(eq(true))
+    end
   end
 
 end
