@@ -8,23 +8,23 @@ Takes user input words and checks if they are anigrams or antigrams. Additional 
 
 ## Specifications
 1. Class takes two strings and saves them as instance variables
-  ** Example Input: Anagrams.new('word1', 'word2')
-  ** Example Output: "/@word1", "/@word2"
+    * Example Input: Anagrams.new('word1', 'word2')
+    * Example Output: "/@word1", "/@word2"
 2. Method checks if words are anagrams
-  * Example Input: "eat", "tea"
-  * Example Output: is_anagram? returns true
+    * Example Input: "eat", "tea"
+    * Example Output: is_anagram? returns true
 3. Method ignores capitalization
-  * Example Input: "EAT", "tea"
-  * Example Output: is_anagram? returns true
+    * Example Input: "EAT", "tea"
+    * Example Output: is_anagram? returns true
 4. Method works with numbers
-  * Example Input: "310", "103"
-  * Example Output: is_anagram? returns true
+    * Example Input: "310", "103"
+    * Example Output: is_anagram? returns true
 5. If words aren't anagrams, another method checks if they are antigrams
-  * Example Input: "cat", "peg"
-  * Example Output: is_anigram? returns false, is_antigram? returns true
+    * Example Input: "cat", "peg"
+    * Example Output: is_anigram? returns false, is_antigram? returns true
 6. Method checks to see if inputs are real words
-  * Example Input: "dog", "ogd"
-  * Example Output: "Invalid word input"
+    * Example Input: "dog", "ogd"
+    * Example Output: "Invalid word input"
 
 ### Anagram Generator Feature
 7. Method takes one input word and returns all possible single-word anagrams of that word
