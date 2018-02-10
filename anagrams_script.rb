@@ -22,10 +22,10 @@ require('./lib/dictionary')
 #   puts "Invalid word input."
 # end
 
-dict_hash
 
-# puts 'Enter a word to find all possible anagrams:'
-# input = gets.chomp
-# generator = Anagrams.new(input, '')
-# results = generator.generate
-# puts results
+puts 'Enter a word to find all possible anagrams:'
+input = gets.chomp
+generator = Anagrams.new(input, '')
+generator.dict_hash
+results = generator.generate
+puts results

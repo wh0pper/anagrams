@@ -1,6 +1,6 @@
 def dict_hash #simplifies unix dictionary to hash, key values all unique sorted letters
-  words = {}
-  File.open("test_dict.txt") do |file|
+  @words = {}
+  File.open("/usr/share/dict/words") do |file|
     file.each do |line|
       line.strip!
       key = line.chars.sort.join
