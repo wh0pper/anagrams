@@ -4,7 +4,7 @@ Ruby script to check if words are Anagrams, completed for Epicodus - Ruby Week 1
 #### By Jared Clemmensen
 
 ## Description
-Takes user input words and checks if they are anigrams or antigrams.
+Takes user input words and checks if they are anigrams or antigrams. Additional feature returns all possible single-word anagrams of an input word.
 
 ## Specifications
 1. Class takes two strings and saves them as instance variables
@@ -29,17 +29,19 @@ Takes user input words and checks if they are anigrams or antigrams.
 ### Anagram Generator Feature
 7. Method takes one input word and returns all possible single-word anagrams of that word
     * Example Input: "those"
-    * Example Output: "shote", "ethos" 
+    * Example Output: "shote, ethos, those"
 
 ## Setup/Installation Requirements
+Running 'anagrams_script.rb' located in the project root directory launches command line interactivity for the anagram methods.
 
+This script requires the standard dictionary on unix machines at /usr/share/dict/words. If your machine doesn't have this file some features will not work.
 
 ## Technologies Used
-
+This project is written in ruby 2.5.0 and uses rspec gem.
 
 ### License
 
-Copyright (c) 2018 Jared Clemmensen and Russell Hofvendahl
+Copyright (c) 2018 Jared Clemmensen
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
