@@ -57,7 +57,7 @@ class Anagrams
           @words.store(key, line)
         else  #if key already exists, append this word to value
           value = @words.fetch(key)
-          value = value + ' ' + line
+          value = value + ', ' + line
           @words[key] = value
         end
       end
@@ -65,6 +65,7 @@ class Anagrams
   end
 
   def generate
+    dict_hash
     key = @word1.chars.sort.join
     @words[key]
   end
