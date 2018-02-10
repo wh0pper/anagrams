@@ -1,9 +1,0 @@
-arc
-art
-car
-enlist
-listen
-rat
-silent
-tar
-tinsel
