@@ -47,9 +47,11 @@ class Anagrams
     return true
   end
 
+
+
   def generate
     letters = @word1.delete(' ').split('')
-    combos = letters.permutation.map &:join
+    combos = letters.permutation.uniq.map &:join
     results = []
     combos.each do |combo|
       if in_dict?(combo)

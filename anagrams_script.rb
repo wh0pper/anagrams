@@ -1,5 +1,6 @@
 #!/usr/bin/env ruby
 require('./lib/anagrams')
+require('./lib/dictionary')
 
 # system 'clear'
 # puts 'Check if two words or phrases are anagrams or antigrams'
@@ -21,8 +22,10 @@ require('./lib/anagrams')
 #   puts "Invalid word input."
 # end
 
-puts 'Enter a word to find all possible anagrams:'
-input = gets.chomp
-generator = Anagrams.new(input, '')
-results = generator.generate
-puts results
+dict_hash
+
+# puts 'Enter a word to find all possible anagrams:'
+# input = gets.chomp
+# generator = Anagrams.new(input, '')
+# results = generator.generate
+# puts results
