@@ -1,13 +1,14 @@
 def dict_hash #simplifies unix dictionary to hash, key values all unique sorted letters
   words = {}
-  File.open("/usr/share/dict/words") do |file|
+  File.open("test_dict.txt") do |file|
     file.each do |line|
+      line.strip!
       key = line.chars.sort.join
-      if !words.has_key?('key') #if key doesn't exist, store that word
+      if !words.has_key?(key) #if key doesn't exist, store that word
         words.store(key, line)
       else  #if key already exists, append this word to value
         value = words.fetch(key)
-        value += line
+        value = value + ' ' + line
         words[key] = value
       end
     end
